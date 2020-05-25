@@ -17,21 +17,12 @@
 	display: block;
 }
 
-#unitippoint { 
-	background: url(../../img/TipPoint.png) no-repeat; 
-	height: 19px; 
-	overflow: hidden; 
-}
+
 
 #unitipmid { 
 	background: url(../../img/TipMid.png) repeat; 
-	width: 145px;
+	width: 115px;
 	height: auto; 
 	padding: 5px 15px;
 }
 
-#unitipcap { 
-	background: url(../../img/TipCap.png) no-repeat; 
-	height: 7px; 
-	overflow: hidden; 
-}

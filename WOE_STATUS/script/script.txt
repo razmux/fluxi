@@ -1,0 +1,47 @@
+//|--- Nome --------------------------------------------------------------//
+//| Woe Status                                                            //
+//|--- Autor -------------------------------------------------------------//
+//| Splash (goo.gl/GLh49Y)                                                //
+//|--- Compatível --------------------------------------------------------//
+//| eA/brA/Cronus                                                         //
+//|--- Descrição ---------------------------------------------------------//
+//| 27/04/2017 - 1.0 Script Criado
+/*|--- Tabela SQL --------------------------------------------------------//
+
+--
+-- Estrutura da tabela `w_status`
+--
+
+CREATE TABLE `w_status` (
+  `status` int(1) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `w_status`
+--
+
+INSERT INTO `w_status` (`status`) VALUES (1);
+
+
+//-------------------------------------------------------------------------*/
+//|                 Por favor, não retire os créditos!                    |//
+//|-----------------------------------------------------------------------|//
+-	script	OnAgitStart	-1,{
+OnAgitStart:
+	query_sql "UPDATE w_status SET status = 1";
+	end;
+OnAgitEnd:
+	 query_sql "UPDATE w_status SET status = 0";
+	 end;
+OnInit:
+        if(agitcheck()==1)
+		{
+                	query_sql "UPDATE w_status SET status = 1";
+			end;
+		}
+		else
+		{
+                	query_sql "UPDATE w_status SET status = 0";
+			end;
+		}
+}
